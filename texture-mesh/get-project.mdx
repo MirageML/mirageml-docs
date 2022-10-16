@@ -1,0 +1,24 @@
+---
+title: "Get Project"
+api: "GET /texture-mesh/project"
+---
+
+<ParamField header="Authorization" type="string" required hidden />
+
+<ParamField header="x-api-key" type="string" required hidden />
+
+### Query Parameters
+
+<ParamField query="projectId" type="string" required>
+  The id of the project
+</ParamField>
+
+<RequestExample>
+
+```bash cURL
+curl -X 'GET' \
+  'https://api.mirageml.com/texture-mesh/project?projectId={}' \
+  -H 'accept: application/json'
+```
+
+</RequestExample>

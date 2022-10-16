@@ -1,0 +1,63 @@
+---
+title: "Create Run"
+api: "POST /textual-inversion/run"
+contentType: "multipart/form-data"
+---
+
+<ParamField header="Authorization" type="string" required hidden />
+
+<ParamField header="x-api-key" type="string" required hidden />
+
+### Form Data
+
+<ParamField body="project-id" type="string" required>
+  The id of the project
+</ParamField>
+
+<ParamField body="prompt" type="string" required>
+  Input prompt for the run
+</ParamField>
+
+<ParamField body="num-images" type="string" default="9">
+  Must be between `0` and `9`
+</ParamField>
+
+<ParamField body="prompt-strength" type="string" default="0.8">
+  Must be between `0` and `1`
+</ParamField>
+
+<ParamField body="width" type="number" default="512"></ParamField>
+
+<ParamField body="height" type="number" default="512"></ParamField>
+
+<ParamField body="num-inference-steps" type="number" default="50">
+  Must be between `10` and `50`
+</ParamField>
+
+<ParamField body="guidance-scale" type="string" default="7.5">
+  Must be between `0` and `10`
+</ParamField>
+
+<ParamField body="files[]" type="files"></ParamField>
+
+<RequestExample>
+
+```bash cURL
+curl -X POST \
+  https://api.mirageml.com/textual-inversion/run \
+  -H 'Authorization: <AUTHORIZATION>' \
+  -H 'Cache-Control: no-cache' \
+  -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+  -H 'x-api-key: <API_KEY>' \
+  -F project-id=<PROJECT_ID> \
+  -F prompt=<PROMPT> \
+  -F num-images=<NUM_IMAGES> \
+  -F prompt-strength=<PROMPT_STRENGTH> \
+  -F width=<WIDTH> \
+  -F height=<HEIGHT> \
+  -F num-inference-steps=<NUM_INFERENCE_STEPS> \
+  -F guidance-scale=<GUIDANCE_SCALE> \
+  -F 'files[]=<FILES>'
+```
+
+</RequestExample>

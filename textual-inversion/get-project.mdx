@@ -1,0 +1,26 @@
+---
+title: "Get Project"
+api: "GET /textual-inversion/project"
+---
+
+<ParamField header="Authorization" type="string" required hidden />
+
+<ParamField header="x-api-key" type="string" required hidden />
+
+### Query Parameters
+
+<ParamField query="project-id" type="string" required>
+  The id of the project
+</ParamField>
+
+<RequestExample>
+
+```bash cURL
+curl -X 'GET' \
+  'https://api.mirageml.com/textual-inversion/project?project-id=<PROJECT-ID>' \
+  -H 'accept: application/json' \
+  -H 'Authorization: <AUTHORIZATION>' \
+  -H 'x-api-key: <API_KEY>'
+```
+
+</RequestExample>

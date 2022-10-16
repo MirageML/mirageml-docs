@@ -1,0 +1,24 @@
+---
+title: "Get Run"
+api: "GET /stable-diffusion/run"
+---
+
+<ParamField header="Authorization" type="string" required hidden />
+
+<ParamField header="x-api-key" type="string" required hidden />
+
+### Query Parameters
+
+<ParamField query="runId" type="string" required>
+  The id of the run
+</ParamField>
+
+<RequestExample>
+
+```bash cURL
+curl -X 'GET' \
+  'https://api.mirageml.com/stable-diffusion/run?runId={}' \
+  -H 'accept: application/json'
+```
+
+</RequestExample>

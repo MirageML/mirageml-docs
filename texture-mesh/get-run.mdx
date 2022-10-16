@@ -1,0 +1,24 @@
+---
+title: "Get Run"
+api: "GET /texture-mesh/run"
+---
+
+<ParamField header="Authorization" type="string" required hidden />
+
+<ParamField header="x-api-key" type="string" required hidden />
+
+### Query Parameters
+
+<ParamField query="run-id" type="string" required>
+  The id of the run
+</ParamField>
+
+<RequestExample>
+
+```bash cURL
+curl -X 'GET' \
+  'https://api.mirageml.com/texture-mesh/run?runId={}' \
+  -H 'accept: application/json'
+```
+
+</RequestExample>

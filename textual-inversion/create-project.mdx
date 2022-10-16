@@ -1,0 +1,42 @@
+---
+title: "Create Project"
+api: "POST /textual-inversion/project"
+contentType: "multipart/form-data"
+---
+
+<ParamField header="Authorization" type="string" required hidden />
+
+<ParamField header="x-api-key" type="string" required hidden />
+
+### Form Data
+
+<ParamField body="init-word" type="string" required></ParamField>
+
+<ParamField body="train-iterations" default="3000" type="number">
+  Value must be between `0` and `5000`
+</ParamField>
+
+<ParamField
+  body="learnable-property"
+  default="object"
+  type="object"
+></ParamField>
+
+<ParamField body="files[]" type="files"></ParamField>
+
+<RequestExample>
+
+```bash cURL
+curl -X POST \
+  https://api.mirageml.com/textual-inversion/project \
+  -H 'Authorization: <AUTHORIZATION>' \
+  -H 'Cache-Control: no-cache' \
+  -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+  -H 'x-api-key: <API_KEY>' \
+  -F learnable-property=<LEARNABLE_PROPERTY> \
+  -F train-iterations=<TRAIN_ITERATIONS> \
+  -F init-word=<INIT_WORD> \
+  -F 'files[]=<FILES>'
+```
+
+</RequestExample>
