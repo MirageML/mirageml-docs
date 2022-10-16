@@ -1,0 +1,27 @@
+---
+title: "Upload Project"
+api: "POST /texture-mesh/project/upload"
+contentType: "multipart/form-data"
+---
+
+<ParamField header="Authorization" type="string" required hidden />
+
+<ParamField header="x-api-key" type="string" required hidden />
+
+### Form Data
+
+<ParamField body="prompt" type="string" required>
+  The input prompt
+</ParamField>
+
+<ParamField body="files[]" type="files"></ParamField>
+
+<RequestExample>
+
+```bash cURL
+curl -X 'POST' \
+  'https://api.mirageml.com/texture-mesh/project/upload' \
+  -H 'accept: multipart/form-data'
+```
+
+</RequestExample>

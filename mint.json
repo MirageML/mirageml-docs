@@ -1,0 +1,86 @@
+{
+  "name": "Mirage",
+  "colors": {
+    "primary": "#3E7ADE",
+    "light": "#84B3F6",
+    "dark": "#234E94",
+    "ultraLight": "#E1EBFA",
+    "ultraDark": "#082149"
+  },
+  "logo": {
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
+  },
+  "favicon": "/favicon.png",
+  "topbarLinks": [
+    {
+      "name": "Contact Us",
+      "url": "mailto:info@mirageml.com"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Open App",
+    "url": "https://www.app.mirageml.com"
+  },
+  "anchors": [
+    {
+      "name": "Blog",
+      "icon": "newspaper",
+      "url": "https://medium.com/mirageml"
+    },
+    {
+      "name": "Discord",
+      "icon": "discord",
+      "url": "https://discord.com/invite/jxBMsK4MMn"
+    },
+    {
+      "name": "Twitter",
+      "icon": "twitter",
+      "url": "https://twitter.com/mirage_ml"
+    }
+  ],
+  "api": {
+    "baseUrl": "https://api.mirageml.com"
+  },
+  "navigation": [
+    {
+      "group": "Home",
+      "pages": ["introduction"]
+    },
+    {
+      "group": "Stable Diffusion",
+      "pages": [
+        "stable-diffusion/get-project",
+        "stable-diffusion/create-project",
+        "stable-diffusion/get-projects",
+        "stable-diffusion/get-run",
+        "stable-diffusion/create-run"
+      ]
+    },
+    {
+      "group": "Textual Inversion",
+      "pages": [
+        "textual-inversion/get-project",
+        "textual-inversion/create-project",
+        "textual-inversion/get-projects",
+        "textual-inversion/get-run",
+        "textual-inversion/create-run"
+      ]
+    },
+    {
+      "group": "Texture Mesh",
+      "pages": [
+        "texture-mesh/get-project",
+        "texture-mesh/project/create",
+        "texture-mesh/project/upload",
+        "texture-mesh/create-project",
+        "texture-mesh/get-projects",
+        "texture-mesh/get-run",
+        "texture-mesh/create-run"
+      ]
+    }
+  ],
+  "classes": {
+    "topbarCtaButton": "inline-flex items-center space-x-1 px-5 py-1.5 font-normal shadow-sm text-sm rounded-full text-white bg-primary hover:bg-primary-dark"
+  }
+}

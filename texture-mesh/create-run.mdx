@@ -1,0 +1,39 @@
+---
+title: "Create Run"
+api: "POST /texture-mesh/run"
+contentType: "multipart/form-data"
+---
+
+<ParamField header="Authorization" type="string" required hidden />
+
+<ParamField header="x-api-key" type="string" required hidden />
+
+### Form Data
+
+<ParamField body="project-id" type="string" required>
+  The id of the project
+</ParamField>
+
+<ParamField body="prompt" type="string"></ParamField>
+
+<ParamField body="generate-maps" type="boolean"></ParamField>
+
+<ParamField body="image-type" type="enum" default="init">
+  Enum: `init`, `color`
+</ParamField>
+
+<ParamField body="super-resolution" type="enum" default="0">
+  Enum: `512`, `1024`, `2048`, `4096`
+</ParamField>
+
+<ParamField body="files[]" type="files"></ParamField>
+
+<RequestExample>
+
+```bash cURL
+curl -X 'POST' \
+  'https://api.mirageml.com/texture-mesh/run?project-id={}' \
+  -H 'accept: multipart/form-data'
+```
+
+</RequestExample>
