@@ -4,21 +4,50 @@ api: "GET /stable-diffusion/run"
 ---
 
 <ParamField header="Authorization" type="string" required hidden />
-
 <ParamField header="x-api-key" type="string" required hidden />
 
-### Query Parameters
+### Description
+A run is an instance of a stable diffusion image generation.
+Returns the run data and generated images for the run.
 
+### Query Parameters
 <ParamField query="runId" type="string" required>
   The id of the run
 </ParamField>
 
 <RequestExample>
-
 ```bash cURL
 curl -X 'GET' \
-  'https://api.mirageml.com/stable-diffusion/run?runId={}' \
+  'https://api.mirageml.com/stable-diffusion/run?runId=6374f405-a7e3-437d-8ad1-bb553d3c28e0' \
   -H 'accept: application/json'
 ```
-
 </RequestExample>
+
+<ResponseExample>
+```json
+{
+    "id": "6374f405-a7e3-437d-8ad1-bb553d3c28e0",
+    "width": "512",
+    "height": "512",
+    "prompt": "Winnie the Pooh eating raspberries on a sofa",
+    "status": "succeeded",
+    "created_at": "2022-09-29T23:21:07.606488+00:00",
+    "num_images": "9",
+    "project_id": "c8ee8aa8-c710-404f-8ef1-2fa8f84d43c1",
+    "guidance_scale": 7.5,
+    "prompt_strength": 0.8,
+    "num_inference_steps": "50",
+    "output_images": [
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/c8ee8aa8-c710-404f-8ef1-2fa8f84d43c1/runs/6374f405-a7e3-437d-8ad1-bb553d3c28e0/output/0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T181130Z&X-Amz-Expires=3600&X-Amz-Signature=39e7ee4f3519a9efb18d60ab5b0ff5d8b148097adee7a46c54acaed7778f6a77&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/c8ee8aa8-c710-404f-8ef1-2fa8f84d43c1/runs/6374f405-a7e3-437d-8ad1-bb553d3c28e0/output/1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T181130Z&X-Amz-Expires=3600&X-Amz-Signature=26b1cada242c848f5ea6ad689806744145e45fc131ed8e1007fc08d9ef6e8adc&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/c8ee8aa8-c710-404f-8ef1-2fa8f84d43c1/runs/6374f405-a7e3-437d-8ad1-bb553d3c28e0/output/2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T181130Z&X-Amz-Expires=3600&X-Amz-Signature=74a33af2273035a526a8ed6b4405c9374a2b1a63ab59effbbe745a8630a04164&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/c8ee8aa8-c710-404f-8ef1-2fa8f84d43c1/runs/6374f405-a7e3-437d-8ad1-bb553d3c28e0/output/3.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T181130Z&X-Amz-Expires=3600&X-Amz-Signature=fd871702dd4f857129014e7936f1984a7da98ddf18da695723bdfb273ddfc550&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/c8ee8aa8-c710-404f-8ef1-2fa8f84d43c1/runs/6374f405-a7e3-437d-8ad1-bb553d3c28e0/output/4.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T181130Z&X-Amz-Expires=3600&X-Amz-Signature=558a68057f6389f0f30428be9ac50c5923afcf572ff4d8df2843285b7d3a968f&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/c8ee8aa8-c710-404f-8ef1-2fa8f84d43c1/runs/6374f405-a7e3-437d-8ad1-bb553d3c28e0/output/5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T181130Z&X-Amz-Expires=3600&X-Amz-Signature=0ba80f82d877dc701da3463dd62ed54e53c91d3502315e4462cc759ded3b4304&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/c8ee8aa8-c710-404f-8ef1-2fa8f84d43c1/runs/6374f405-a7e3-437d-8ad1-bb553d3c28e0/output/6.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T181130Z&X-Amz-Expires=3600&X-Amz-Signature=f73fb0d82ecbfd34f372043bc06bd059d7d56334ed0bdb31840efa0b9c1befe3&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/c8ee8aa8-c710-404f-8ef1-2fa8f84d43c1/runs/6374f405-a7e3-437d-8ad1-bb553d3c28e0/output/7.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T181130Z&X-Amz-Expires=3600&X-Amz-Signature=12497917718c5dc64d3eef732653ec4e317a67935ee64667dcaf3b71af36bc24&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/c8ee8aa8-c710-404f-8ef1-2fa8f84d43c1/runs/6374f405-a7e3-437d-8ad1-bb553d3c28e0/output/8.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T181130Z&X-Amz-Expires=3600&X-Amz-Signature=658478741cdb6b7127d9c696fd92da0ffb909ade6d39b32fdc253d71c74a52fb&X-Amz-SignedHeaders=host&x-id=GetObject"
+    ]
+}
+```
+</ResponseExample>

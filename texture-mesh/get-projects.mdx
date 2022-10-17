@@ -4,15 +4,67 @@ api: "GET /texture-mesh/projects"
 ---
 
 <ParamField header="Authorization" type="string" required hidden />
-
 <ParamField header="x-api-key" type="string" required hidden />
 
-<RequestExample>
+### Description
+Returns an array of the texture mesh projects
 
+<RequestExample>
 ```bash cURL
 curl -X 'GET' \
   'https://api.mirageml.com/texture-mesh/projects' \
   -H 'accept: application/json'
 ```
-
 </RequestExample>
+
+<ResponseExample>
+```json
+[
+    {
+        "node": {
+            "id": "66bb509b-7888-427a-b9fc-1a915a46fba0",
+            "type": "upload",
+            "prompt": "Pallet_A1",
+            "status": "succeeded",
+            "created_at": "2022-10-10T00:05:43.106404+00:00",
+            "text_mesh_runsCollection": {
+                "edges": [
+                    {
+                        "node": {
+                            "id": "433db382-d08a-4543-bbd7-b6aa28683745",
+                            "prompt": "shiny rough metal",
+                            "status": "succeeded",
+                            "color_map": false,
+                            "created_at": "2022-10-13T20:53:49.681228+00:00",
+                            "init_image": false,
+                            "num_outputs": "4",
+                            "square_func": "scale",
+                            "generate_maps": true,
+                            "make_tileable": false,
+                            "prompt_strength": 0.8,
+                            "super_resolution": "4096"
+                        },
+                    },
+                    {
+                        "node": {
+                            "id": "e92f0027-c1a8-469f-a44c-e066e7fdb663",
+                            "prompt": "shiny rough metal",
+                            "status": "succeeded",
+                            "color_map": false,
+                            "created_at": "2022-10-11T01:11:01.361866+00:00",
+                            "init_image": false,
+                            "num_outputs": "4",
+                            "square_func": "scale",
+                            "generate_maps": true,
+                            "make_tileable": false,
+                            "prompt_strength": 0.8,
+                            "super_resolution": "0"
+                        },
+                    }
+                ],
+            }
+        },
+    }
+]
+```
+</ResponseExample>

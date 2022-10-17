@@ -5,11 +5,13 @@ contentType: "multipart/form-data"
 ---
 
 <ParamField header="Authorization" type="string" required hidden />
-
 <ParamField header="x-api-key" type="string" required hidden />
 
-### Form Data
+### Description
+Run a texture generation task with the requested parameters.
+Will be associated with mesh created
 
+### Form Data
 <ParamField body="project-id" type="string" required>
   The id of the project
 </ParamField>
@@ -35,11 +37,18 @@ contentType: "multipart/form-data"
 <ParamField body="files[]" type="files"></ParamField>
 
 <RequestExample>
-
 ```bash cURL
 curl -X 'POST' \
   'https://api.mirageml.com/texture-mesh/run?project-id={}' \
   -H 'accept: multipart/form-data'
 ```
-
 </RequestExample>
+
+<ResponseExample>
+```json
+{
+  "statusCode": 200,
+  "run_id": "433db382-d08a-4543-bbd7-b6aa28683745"
+}
+```
+</ResponseExample>
