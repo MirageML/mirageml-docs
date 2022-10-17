@@ -26,6 +26,12 @@ contentType: "multipart/form-data"
   Enum: `512`, `1024`, `2048`, `4096`
 </ParamField>
 
+<ParamField body="square-func" type="enum" default="scale">
+  Enum: `scale`, `crop`
+</ParamField>
+
+<ParamField body="make-tileable" type="boolean"></ParamField>
+
 <ParamField body="files[]" type="files"></ParamField>
 
 <RequestExample>
