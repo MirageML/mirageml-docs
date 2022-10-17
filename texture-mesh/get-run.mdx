@@ -4,8 +4,12 @@ api: "GET /texture-mesh/run"
 ---
 
 <ParamField header="Authorization" type="string" required hidden />
-
 <ParamField header="x-api-key" type="string" required hidden />
+
+### Description
+
+A run is an instance of a texture mesh creation.
+Returns the run data and generated textures.
 
 ### Query Parameters
 
@@ -22,3 +26,23 @@ curl -X 'GET' \
 ```
 
 </RequestExample>
+
+<ResponseExample>
+```json
+{
+  "id": "433db382-d08a-4543-bbd7-b6aa28683745",
+  "prompt": "shiny rough metal",
+  "status": "succeeded",
+  "color_map": false,
+  "created_at": "2022-10-13T20:53:49.681228+00:00",
+  "init_image": false,
+  "num_outputs": "4",
+  "square_func": "scale",
+  "generate_maps": true,
+  "make_tileable": false,
+  "prompt_strength": 0.8,
+  "super_resolution": "4096",
+  "textures": "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/texture_mesh/projects/undefined/textures/433db382-d08a-4543-bbd7-b6aa28683745/textures.tar.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T190257Z&X-Amz-Expires=3600&X-Amz-Signature=a8aa34365a0e8391326d96ded14e29527a297a9bb78bb96b1010e734b2624b77&X-Amz-SignedHeaders=host&x-id=GetObject"
+}
+```
+</ResponseExample>

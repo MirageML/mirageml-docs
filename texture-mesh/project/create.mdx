@@ -4,21 +4,29 @@ api: "POST /texture-mesh/project/create"
 ---
 
 <ParamField header="Authorization" type="string" required hidden />
-
 <ParamField header="x-api-key" type="string" required hidden />
 
-### Body Data
+### Description
+Create a mesh with prompt and mesh algorithm
 
+### Body Data
 <ParamField body="prompt" type="string" required>
   The input prompt
 </ParamField>
 
 <RequestExample>
-
 ```bash cURL
 curl -X 'POST' \
   'https://api.mirageml.com/texture-mesh/project/create' \
   -H 'accept: application/json'
 ```
-
 </RequestExample>
+
+<ResponseExample>
+```json
+{
+  "statusCode": 200,
+  "project_id": "66bb509b-7888-427a-b9fc-1a915a46fba0"
+}
+```
+</ResponseExample>

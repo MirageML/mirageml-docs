@@ -58,7 +58,7 @@
       ]
     },
     {
-      "group": "Textual Inversion",
+      "group": "Dreambooth",
       "pages": [
         "textual-inversion/get-projects",
         "textual-inversion/get-project",

@@ -5,8 +5,10 @@ contentType: "multipart/form-data"
 ---
 
 <ParamField header="Authorization" type="string" required hidden />
-
 <ParamField header="x-api-key" type="string" required hidden />
+
+### Description
+Create a mesh by uploading the .obj file
 
 ### Form Data
 
@@ -17,11 +19,18 @@ contentType: "multipart/form-data"
 <ParamField body="files[]" type="files"></ParamField>
 
 <RequestExample>
-
 ```bash cURL
 curl -X 'POST' \
   'https://api.mirageml.com/texture-mesh/project/upload' \
   -H 'accept: multipart/form-data'
 ```
-
 </RequestExample>
+
+<ResponseExample>
+```json
+{
+  "statusCode": 200,
+  "project_id": "66bb509b-7888-427a-b9fc-1a915a46fba0"
+}
+```
+</ResponseExample>
