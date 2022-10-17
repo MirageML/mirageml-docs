@@ -4,8 +4,11 @@ api: "GET /textual-inversion/run"
 ---
 
 <ParamField header="Authorization" type="string" required hidden />
-
 <ParamField header="x-api-key" type="string" required hidden />
+
+### Description
+A run is an instance of a textual inversion image generation.
+Returns the run data and generated images for the run.
 
 ### Query Parameters
 
@@ -14,7 +17,6 @@ api: "GET /textual-inversion/run"
 </ParamField>
 
 <RequestExample>
-
 ```bash cURL
 curl -X 'GET' \
   'https://api.mirageml.com/textual-inversion/run?run-id=<RUN-ID>' \
@@ -22,5 +24,35 @@ curl -X 'GET' \
   -H 'Authorization: <AUTHORIZATION>' \
   -H 'x-api-key: <API_KEY>'
 ```
-
 </RequestExample>
+
+<ResponseExample>
+```json
+{
+    "id": "15993396-1860-455a-84af-09795b0d3d1e",
+    "width": "512",
+    "height": "512",
+    "prompt": "photos of a <bridges>",
+    "status": "succeeded",
+    "__typename": "textual_inversion_runs",
+    "created_at": "2022-09-08T05:41:40.876152+00:00",
+    "num_images": "9",
+    "project_id": "d9da9e45-ebe7-4d01-9f95-17e74a13b020",
+    "guidance_scale": 7.5,
+    "prompt_strength": 0.8,
+    "num_inference_steps": "50",
+    "output_images": [
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/d9da9e45-ebe7-4d01-9f95-17e74a13b020/runs/15993396-1860-455a-84af-09795b0d3d1e/output/0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T184017Z&X-Amz-Expires=3600&X-Amz-Signature=968839dfe84928a75a862df65714b1141f4bf1f145434782538ae45c5cd8609a&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/d9da9e45-ebe7-4d01-9f95-17e74a13b020/runs/15993396-1860-455a-84af-09795b0d3d1e/output/1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T184017Z&X-Amz-Expires=3600&X-Amz-Signature=839479738cdc05a202676c987e03e239a0ae2c9df3f604e21ead04e31794dc2a&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/d9da9e45-ebe7-4d01-9f95-17e74a13b020/runs/15993396-1860-455a-84af-09795b0d3d1e/output/2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T184017Z&X-Amz-Expires=3600&X-Amz-Signature=da3422550bc531deb5b0ad2f0b5e3687c10c4fac63ab5c377a81ed13c44714ea&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/d9da9e45-ebe7-4d01-9f95-17e74a13b020/runs/15993396-1860-455a-84af-09795b0d3d1e/output/3.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T184017Z&X-Amz-Expires=3600&X-Amz-Signature=1f746ec6f2bb7b5f059b5b06246e515fc6e59d79d055d9a30f15b34e42a03b13&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/d9da9e45-ebe7-4d01-9f95-17e74a13b020/runs/15993396-1860-455a-84af-09795b0d3d1e/output/4.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T184017Z&X-Amz-Expires=3600&X-Amz-Signature=24a98c4c1c0e9f2d151ad8f8317d66144adc18dd60c217342cb9105b800d1ea8&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/d9da9e45-ebe7-4d01-9f95-17e74a13b020/runs/15993396-1860-455a-84af-09795b0d3d1e/output/5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T184017Z&X-Amz-Expires=3600&X-Amz-Signature=427a357c72994e62506f33ad34926fecbdec60d8a3db46c832d93d6418f77d47&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/d9da9e45-ebe7-4d01-9f95-17e74a13b020/runs/15993396-1860-455a-84af-09795b0d3d1e/output/6.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T184017Z&X-Amz-Expires=3600&X-Amz-Signature=4cab0933687ab09b24e5c51f88922bc8c3ce804ad2257973f5f40bcec88e85a3&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/d9da9e45-ebe7-4d01-9f95-17e74a13b020/runs/15993396-1860-455a-84af-09795b0d3d1e/output/7.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T184017Z&X-Amz-Expires=3600&X-Amz-Signature=7c49ef2d317013ca331bfed14d426313be479589d0fe6e1f5cad16f44884799e&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/d9da9e45-ebe7-4d01-9f95-17e74a13b020/runs/15993396-1860-455a-84af-09795b0d3d1e/output/8.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T184017Z&X-Amz-Expires=3600&X-Amz-Signature=8ebae9eeb02d53b6765d244a0cdc15d1dad681310445665f535fd3a8952d7d07&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/textual_inversion/projects/d9da9e45-ebe7-4d01-9f95-17e74a13b020/runs/15993396-1860-455a-84af-09795b0d3d1e/output/9.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T184017Z&X-Amz-Expires=3600&X-Amz-Signature=a7e1e3ba6f2c640b68a5d63a2be45bb037a431d2af6472ddf90a89ba64338e53&X-Amz-SignedHeaders=host&x-id=GetObject"
+    ]
+}
+```
+</ResponseExample>

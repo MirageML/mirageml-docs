@@ -5,8 +5,10 @@ contentType: "multipart/form-data"
 ---
 
 <ParamField header="Authorization" type="string" required hidden />
-
 <ParamField header="x-api-key" type="string" required hidden />
+
+### Description
+Run textual inversion image generation with an optional initial image
 
 ### Form Data
 
@@ -41,7 +43,6 @@ contentType: "multipart/form-data"
 <ParamField body="files[]" type="files"></ParamField>
 
 <RequestExample>
-
 ```bash cURL
 curl -X POST \
   https://api.mirageml.com/textual-inversion/run \
@@ -59,5 +60,13 @@ curl -X POST \
   -F guidance-scale=<GUIDANCE_SCALE> \
   -F 'files[]=<FILES>'
 ```
-
 </RequestExample>
+
+<ResponseExample>
+```json
+{
+  "statusCode": 200
+  "run_id": "15993396-1860-455a-84af-09795b0d3d1e"
+}
+```
+</ResponseExample>
