@@ -4,15 +4,64 @@ api: "GET /stable-diffusion/projects"
 ---
 
 <ParamField header="Authorization" type="string" required hidden />
-
 <ParamField header="x-api-key" type="string" required hidden />
 
-<RequestExample>
+### Description
+Returns an array of the stable diffusion projects created
 
+<RequestExample>
 ```bash cURL
 curl -X 'GET' \
   'https://api.mirageml.com/stable-diffusion/projects' \
   -H 'accept: application/json'
 ```
-
 </RequestExample>
+
+<ResponseExample>
+```json
+[
+    {
+        "node": {
+            "id": "c8ee8aa8-c710-404f-8ef1-2fa8f84d43c1",
+            "init_word": "pooh",
+            "created_at": "2022-09-29T22:30:07.26227+00:00",
+            "finetune_job_status": "succeeded",
+            "textual_inversion_runsCollection": {
+                "edges": [
+                    {
+                        "node": {
+                            "id": "6374f405-a7e3-437d-8ad1-bb553d3c28e0",
+                            "width": "512",
+                            "height": "512",
+                            "prompt": "Winnie the Pooh eating raspberries on a sofa",
+                            "status": "succeeded",
+                            "created_at": "2022-09-29T23:21:07.606488+00:00",
+                            "init_image": false,
+                            "num_images": "9",
+                            "guidance_scale": 7.5,
+                            "prompt_strength": 0.8,
+                            "num_inference_steps": "50"
+                        },
+                    },
+                    {
+                        "node": {
+                            "id": "9a99c812-3fbf-41d7-b362-6ed2dc73a7e9",
+                            "width": "512",
+                            "height": "512",
+                            "prompt": "Winnie the Pooh eating raspberries in the kitchen",
+                            "status": "succeeded",
+                            "created_at": "2022-09-29T22:49:21.720164+00:00",
+                            "init_image": false,
+                            "num_images": "9",
+                            "guidance_scale": 7.5,
+                            "prompt_strength": 0.8,
+                            "num_inference_steps": "50"
+                        },
+                    }
+                ],
+            }
+        },
+    }
+]
+```
+</ResponseExample>

@@ -4,15 +4,24 @@ api: "POST /stable-diffusion/project"
 ---
 
 <ParamField header="Authorization" type="string" required hidden />
-
 <ParamField header="x-api-key" type="string" required hidden />
 
-<RequestExample>
+### Description
+Creates a stable diffusion project
 
+<RequestExample>
 ```bash cURL
 curl -X 'POST' \
   'https://api.mirageml.com/stable-diffusion/project' \
   -H 'accept: application/json'
 ```
-
 </RequestExample>
+
+<ResponseExample>
+```json
+{
+  "statusCode": 200,
+  "project_id": "c8ee8aa8-c710-404f-8ef1-2fa8f84d43c1"
+}
+```
+</ResponseExample>
