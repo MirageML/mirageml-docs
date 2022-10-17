@@ -50,9 +50,9 @@
     {
       "group": "Stable Diffusion",
       "pages": [
+        "stable-diffusion/get-projects",
         "stable-diffusion/get-project",
         "stable-diffusion/create-project",
-        "stable-diffusion/get-projects",
         "stable-diffusion/get-run",
         "stable-diffusion/create-run"
       ]
@@ -60,9 +60,9 @@
     {
       "group": "Textual Inversion",
       "pages": [
+        "textual-inversion/get-projects",
         "textual-inversion/get-project",
         "textual-inversion/create-project",
-        "textual-inversion/get-projects",
         "textual-inversion/get-run",
         "textual-inversion/create-run"
       ]
@@ -70,11 +70,11 @@
     {
       "group": "Texture Mesh",
       "pages": [
+        "texture-mesh/get-projects",
         "texture-mesh/get-project",
         "texture-mesh/project/create",
         "texture-mesh/project/upload",
         "texture-mesh/create-project",
-        "texture-mesh/get-projects",
         "texture-mesh/get-run",
         "texture-mesh/create-run"
       ]
