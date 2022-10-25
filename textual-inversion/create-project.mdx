@@ -16,6 +16,10 @@ Creates a textual inversion project
 Describes the word
 </ParamField>
 
+<ParamField body="train-iterations" type="string">
+Number of iterations to train
+</ParamField>
+
 <ParamField body="files[]" type="files"></ParamField>
 
 <RequestExample>
@@ -27,6 +31,7 @@ curl -X POST \
   -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
   -H 'x-api-key: <API_KEY>' \
   -F init-word=<INIT_WORD> \
+  -F train-iterations=<TRAIN_ITERATIONS>
   -F 'files[]=<FILES>'
 ```
 </RequestExample>
