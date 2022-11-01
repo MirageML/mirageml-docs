@@ -84,6 +84,8 @@
     "topbarCtaButton": "inline-flex items-center space-x-1 px-5 py-1.5 font-normal shadow-sm text-sm rounded-full text-white bg-primary hover:bg-primary-dark"
   },
   "analytics": {
-    "ga4": "G-PQ4M96XZ85"
+    "ga4": {
+      "measurementId": "G-PQ4M96XZ85"
+    }
   }
 }
