@@ -1,13 +1,13 @@
 ---
 title: "Get Run"
-api: "GET /textual-inversion/run"
+api: "GET /dreambooth/run"
 ---
 
 <ParamField header="Authorization" type="string" required hidden />
 <ParamField header="x-api-key" type="string" required hidden />
 
 ### Description
-A run is an instance of a textual inversion image generation.
+A run is an instance of a dreambooth image generation.
 Returns the run data and generated images for the run.
 
 ### Query Parameters
@@ -19,7 +19,7 @@ Returns the run data and generated images for the run.
 <RequestExample>
 ```bash cURL
 curl -X 'GET' \
-  'https://api.mirageml.com/textual-inversion/run?run-id=<RUN-ID>' \
+  'https://api.mirageml.com/dreambooth/run?run-id=<RUN-ID>' \
   -H 'accept: application/json' \
   -H 'Authorization: <AUTHORIZATION>' \
   -H 'x-api-key: <API_KEY>'

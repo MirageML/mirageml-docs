@@ -60,11 +60,11 @@
     {
       "group": "Dreambooth",
       "pages": [
-        "textual-inversion/get-projects",
-        "textual-inversion/get-project",
-        "textual-inversion/create-project",
-        "textual-inversion/get-run",
-        "textual-inversion/create-run"
+        "dreambooth/get-projects",
+        "dreambooth/get-project",
+        "dreambooth/create-project",
+        "dreambooth/get-run",
+        "dreambooth/create-run"
       ]
     },
     {
