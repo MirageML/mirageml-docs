@@ -1,13 +1,13 @@
 ---
 title: "Get Project"
-api: "GET /textual-inversion/project"
+api: "GET /dreambooth/project"
 ---
 
 <ParamField header="Authorization" type="string" required hidden />
 <ParamField header="x-api-key" type="string" required hidden />
 
 ### Description
-Returns the textual inversion project
+Returns the dreambooth project
 
 ### Query Parameters
 
@@ -18,7 +18,7 @@ Returns the textual inversion project
 <RequestExample>
 ```bash cURL
 curl -X 'GET' \
-  'https://api.mirageml.com/textual-inversion/project?project-id=<PROJECT-ID>' \
+  'https://api.mirageml.com/dreambooth/project?project-id=<PROJECT-ID>' \
   -H 'accept: application/json' \
   -H 'Authorization: <AUTHORIZATION>' \
   -H 'x-api-key: <API_KEY>'

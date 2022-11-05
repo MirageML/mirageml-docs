@@ -1,6 +1,6 @@
 ---
 title: "Create Project"
-api: "POST /textual-inversion/project"
+api: "POST /dreambooth/project"
 contentType: "multipart/form-data"
 ---
 
@@ -8,7 +8,7 @@ contentType: "multipart/form-data"
 <ParamField header="x-api-key" type="string" required hidden />
 
 ### Description
-Creates a textual inversion project
+Creates a dreambooth project
 
 ### Form Data
 
@@ -25,7 +25,7 @@ Number of iterations to train
 <RequestExample>
 ```bash cURL
 curl -X POST \
-  https://api.mirageml.com/textual-inversion/project \
+  https://api.mirageml.com/dreambooth/project \
   -H 'Authorization: <AUTHORIZATION>' \
   -H 'Cache-Control: no-cache' \
   -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \

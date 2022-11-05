@@ -1,6 +1,6 @@
 ---
 title: "Create Run"
-api: "POST /textual-inversion/run"
+api: "POST /dreambooth/run"
 contentType: "multipart/form-data"
 ---
 
@@ -8,7 +8,7 @@ contentType: "multipart/form-data"
 <ParamField header="x-api-key" type="string" required hidden />
 
 ### Description
-Run textual inversion image generation with an optional initial image
+Run dreambooth image generation with an optional initial image
 
 ### Form Data
 
@@ -45,7 +45,7 @@ Run textual inversion image generation with an optional initial image
 <RequestExample>
 ```bash cURL
 curl -X POST \
-  https://api.mirageml.com/textual-inversion/run \
+  https://api.mirageml.com/dreambooth/run \
   -H 'Authorization: <AUTHORIZATION>' \
   -H 'Cache-Control: no-cache' \
   -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
