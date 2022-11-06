@@ -8,16 +8,25 @@ contentType: "multipart/form-data"
 <ParamField header="x-api-key" type="string" required hidden />
 
 ### Description
+
 Creates a dreambooth project
 
 ### Form Data
 
 <ParamField body="init-word" type="string" required>
-Describes the word
+  Describes the word
 </ParamField>
 
 <ParamField body="train-iterations" type="string" default="800">
-Number of iterations to train
+  Number of iterations to train
+</ParamField>
+
+<ParamField body="links" type="string">
+JSON object of links to images to download.
+Example:
+```
+{"0": "https://sabe.io/images/saturn.png", "1": "https://sabe.io/images/mars.png", "2": "https://sabe.io/images/earth.png"}
+```
 </ParamField>
 
 <ParamField body="files[]" type="files"></ParamField>
