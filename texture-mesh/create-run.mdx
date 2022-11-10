@@ -38,9 +38,20 @@ Will be associated with mesh created
 
 <RequestExample>
 ```bash cURL
-curl -X 'POST' \
-  'https://api.mirageml.com/texture-mesh/run?project-id={}' \
-  -H 'accept: multipart/form-data'
+curl -X POST \
+  https://api.mirageml.com/texture-mesh/run \
+  -H 'Authorization: <AUTHORIZATION>' \
+  -H 'Cache-Control: no-cache' \
+  -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+  -H 'x-api-key: <API_KEY>' \
+  -F project-id=<PROJECT_ID> \
+  -F prompt=<PROMPT> \
+  -F image-type=<IMAGE_TYPE> \
+  -F generate-maps=<GENERATE_MAPS> \
+  -F super-resolution=<SUPER_RESOLUTION> \
+  -F square-func=<SQUARE_FUNC> \
+  -f make-tileable=<TILEABLE> \
+  -F files=<FILES> \
 ```
 </RequestExample>
 
