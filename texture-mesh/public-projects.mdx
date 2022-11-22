@@ -1,0 +1,84 @@
+---
+title: "Get Public Projects"
+api: "GET /texture-mesh/public-projects"
+---
+
+### Description
+Returns an array of the public 3D Asset projects
+
+### Query Parameters
+<ParamField query="page" type="string">
+  The page number, 30 assets per page
+</ParamField>
+
+
+<RequestExample>
+```bash cURL
+curl -X 'GET' \
+  'https://api.mirageml.com/texture-mesh/public-projects' \
+  -H 'accept: application/json'
+```
+</RequestExample>
+
+<ResponseExample>
+```json
+{
+   "data":[
+      {
+         "id":"de86983b-264f-47e1-9a9c-0e075848bb86",
+         "created_at":"2022-11-22T20:16:08.756001+00:00",
+         "user_id":"b099e43a-dced-453f-8324-692e7631fcab",
+         "run_id":null,
+         "project_id":"03bfe946-40b2-4278-bb5f-02bb645ad31c",
+         "mesh_prompt":"helmet mech warrior",
+         "texture_prompt":"original",
+         "metallic":0.5,
+         "roughness":0.5,
+         "generate_maps":false,
+         "mesh_algorithm":"dreamfusion",
+         "guidance":"stable-diffusion",
+         "seed":116857,
+         "train_iterations":100,
+         "votes":0,
+         "public":true,
+         "negative_prompt":null,
+         "negative_votes":0,
+         "stable_diffusion_checkpoint":"runwayml/stable-diffusion-v1-5",
+         "inference_run_id":"792fa441-e407-4664-ba91-d7b29c7358c7",
+         "style":"fortnite",
+         "polygon":"tris",
+         "mesh_url":"https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/b099e43a-dced-453f-8324-692e7631fcab/de86983b-264f-47e1-9a9c-0e075848bb86/mesh.obj?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221122%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221122T202138Z&X-Amz-Expires=900&X-Amz-Signature=12844bada06bb3401d9754b1d5010a720fa2cbdaaf8a3085866f3ea71755a21a&X-Amz-SignedHeaders=host&x-id=GetObject",
+         "glb_url":"https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/b099e43a-dced-453f-8324-692e7631fcab/de86983b-264f-47e1-9a9c-0e075848bb86/mesh.glb?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221122%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221122T202140Z&X-Amz-Expires=900&X-Amz-Signature=586bb4afa394f37a9d9ed5675fde9f4952edfefb6881ab63e4752d90c066fb34&X-Amz-SignedHeaders=host&x-id=GetObject",
+         "png_url":"https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/b099e43a-dced-453f-8324-692e7631fcab/de86983b-264f-47e1-9a9c-0e075848bb86/mesh.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221122%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221122T202140Z&X-Amz-Expires=900&X-Amz-Signature=2c8dfd7b7b513f94e3457ac24be49025dcb89f4dcd5fe50a82b555990c2e2387&X-Amz-SignedHeaders=host&x-id=GetObject"
+      },
+      {
+         "id":"b902388d-fbd9-42b1-8fba-81104a21456b",
+         "created_at":"2022-11-22T20:05:59.303336+00:00",
+         "user_id":"225c7347-71c2-463c-8cdf-9ec8a55232a2",
+         "run_id":null,
+         "project_id":"abfb58d0-fc47-4236-95b2-45d7f3323c9d",
+         "mesh_prompt":"3 d render of rainbow burger, sunny day ",
+         "texture_prompt":"original",
+         "metallic":0.5,
+         "roughness":0.5,
+         "generate_maps":false,
+         "mesh_algorithm":"dreamfusion",
+         "guidance":"stable-diffusion",
+         "seed":0,
+         "train_iterations":100,
+         "votes":0,
+         "public":true,
+         "negative_prompt":null,
+         "negative_votes":0,
+         "stable_diffusion_checkpoint":"runwayml/stable-diffusion-v1-5",
+         "inference_run_id":"1f8413cc-9052-4a28-b2a8-a85c21befd68",
+         "style":"fortnite",
+         "polygon":"tris",
+         "mesh_url":"https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/225c7347-71c2-463c-8cdf-9ec8a55232a2/b902388d-fbd9-42b1-8fba-81104a21456b/mesh.obj?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221122%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221122T202138Z&X-Amz-Expires=900&X-Amz-Signature=d921d06c580398911ebe8143ead27b373e4b58b3d339dcd02ccc003b7c01237d&X-Amz-SignedHeaders=host&x-id=GetObject",
+         "glb_url":"https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/225c7347-71c2-463c-8cdf-9ec8a55232a2/b902388d-fbd9-42b1-8fba-81104a21456b/mesh.glb?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221122%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221122T202140Z&X-Amz-Expires=900&X-Amz-Signature=3a8e01b0c646337c037612640c9b74c4674c93f014a7d485de59075f39266e48&X-Amz-SignedHeaders=host&x-id=GetObject",
+         "png_url":"https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/225c7347-71c2-463c-8cdf-9ec8a55232a2/b902388d-fbd9-42b1-8fba-81104a21456b/mesh.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221122%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221122T202140Z&X-Amz-Expires=900&X-Amz-Signature=8ac6e6ef84a00c64b3621cffe9ccf84dd55ce23f5315a9a100324a9ba134907f&X-Amz-SignedHeaders=host&x-id=GetObject"
+      }
+   ]
+}
+```
+</ResponseExample>
