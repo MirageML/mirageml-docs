@@ -70,6 +70,7 @@
     {
       "group": "Texture Mesh",
       "pages": [
+        "texture-mesh/public-projects",
         "texture-mesh/get-projects",
         "texture-mesh/get-project",
         "texture-mesh/project/create",
