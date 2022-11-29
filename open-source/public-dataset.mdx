@@ -1,0 +1,107 @@
+---
+title: "Public Dataset"
+api: "GET /texture-mesh/public-projects"
+---
+
+### Description
+Returns the public 3D assets created on Mirage
+
+### Query Parameters
+<ParamField query="page" type="string">
+  The paginated page to obtain data
+</ParamField>
+
+<ParamField query="filter" type="string">
+  A text filter to search projects based on prompt
+</ParamField>
+
+<RequestExample>
+```bash cURL
+curl -X 'GET' \
+  'https://api.mirageml.com/texture-mesh/project?project-id={}' \
+  -H 'accept: application/json'
+```
+</RequestExample>
+
+<ResponseExample>
+```json
+{
+    "data": [
+        {
+            "id": "8409bc12-2389-442f-83d3-daff3bc23240",
+            "created_at": "2022-11-29T18:51:05.582816+00:00",
+            "user_id": "260a23f4-f145-4055-87d4-4ea8be10e087",
+            "run_id": null,
+            "project_id": "8bda5222-9cf8-4da4-aef9-539360398d8e",
+            "mesh_prompt": "Ronald McDonald",
+            "texture_prompt": "original",
+            "metallic": 0.5,
+            "roughness": 0.5,
+            "generate_maps": false,
+            "mesh_algorithm": "dreamfusion",
+            "guidance": "stable-diffusion",
+            "seed": 465577,
+            "train_iterations": 100,
+            "votes": 0,
+            "public": true,
+            "negative_prompt": "",
+            "negative_votes": 0,
+            "stable_diffusion_checkpoint": "stabilityai/stable-diffusion-2-base",
+            "inference_run_id": "fcda1560-b154-4013-89d7-abe4fbc8867c",
+            "style": "roblox",
+            "polygon": "tris",
+            "urls": {
+                "fbx": "https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/260a23f4-f145-4055-87d4-4ea8be10e087/8409bc12-2389-442f-83d3-daff3bc23240/mesh.fbx?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221129T185106Z&X-Amz-Expires=604800&X-Amz-Signature=122ce1e85b101fdce44fbe4286e60557733b2d9f6207bc727f265e455b691a3e&X-Amz-SignedHeaders=host&x-id=GetObject",
+                "gif": null,
+                "glb": "https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/260a23f4-f145-4055-87d4-4ea8be10e087/8409bc12-2389-442f-83d3-daff3bc23240/mesh.glb?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221129T185106Z&X-Amz-Expires=604800&X-Amz-Signature=abbe1d4b1ce8a0f3cbda1e276adb3c3ace54ee2714d967ab3565bad9f0d64af4&X-Amz-SignedHeaders=host&x-id=GetObject",
+                "mtl": "https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/260a23f4-f145-4055-87d4-4ea8be10e087/8409bc12-2389-442f-83d3-daff3bc23240/mesh.mtl?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221129T185106Z&X-Amz-Expires=604800&X-Amz-Signature=a78a72cba8c82412f26981b821064e48d9d76f7726c3e053eda54eb815b81127&X-Amz-SignedHeaders=host&x-id=GetObject",
+                "obj": "https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/260a23f4-f145-4055-87d4-4ea8be10e087/8409bc12-2389-442f-83d3-daff3bc23240/mesh.obj?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221129T185106Z&X-Amz-Expires=604800&X-Amz-Signature=5b1b6c873511770c2342539c33ac8455049490c6228c656db7e0f54b309acb4a&X-Amz-SignedHeaders=host&x-id=GetObject",
+                "png": "https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/260a23f4-f145-4055-87d4-4ea8be10e087/8409bc12-2389-442f-83d3-daff3bc23240/mesh.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221129T185106Z&X-Amz-Expires=604800&X-Amz-Signature=8692e6c1c49057a7b38f5860f9c8449dac748e4b18ba9b3c2c4378c09d9790af&X-Amz-SignedHeaders=host&x-id=GetObject",
+                "gltf": "https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/260a23f4-f145-4055-87d4-4ea8be10e087/8409bc12-2389-442f-83d3-daff3bc23240/mesh.gltf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221129T185106Z&X-Amz-Expires=604800&X-Amz-Signature=e48210660016c3c5636547d944912fec2a1d828faae9ba72a86b938b050e288c&X-Amz-SignedHeaders=host&x-id=GetObject"
+            },
+            "enable_remix": true,
+            "mesh_url": "https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/260a23f4-f145-4055-87d4-4ea8be10e087/8409bc12-2389-442f-83d3-daff3bc23240/mesh.obj?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221129T193639Z&X-Amz-Expires=900&X-Amz-Signature=b96ceb4f496eaed593af024aa948476bf5a0e3ec57984dc820de7d97c35ca7e8&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "glb_url": "https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/260a23f4-f145-4055-87d4-4ea8be10e087/8409bc12-2389-442f-83d3-daff3bc23240/mesh.glb?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221129T193640Z&X-Amz-Expires=900&X-Amz-Signature=377e225711b011b536bf2e36b95efd6b8e31a8af9f726e2116aea5ee498ed948&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "png_url": "https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/260a23f4-f145-4055-87d4-4ea8be10e087/8409bc12-2389-442f-83d3-daff3bc23240/mesh.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221129T193642Z&X-Amz-Expires=900&X-Amz-Signature=3dc506c0c1a1ad4be3e1ae29ea9c223001989bb3c8df9d95b8436bf68d0a41d1&X-Amz-SignedHeaders=host&x-id=GetObject"
+        },
+        {
+            "id": "4794a3d2-b460-4da6-9d20-3ea95d3249da",
+            "created_at": "2022-11-29T18:50:53.910301+00:00",
+            "user_id": "260a23f4-f145-4055-87d4-4ea8be10e087",
+            "run_id": null,
+            "project_id": "8bda5222-9cf8-4da4-aef9-539360398d8e",
+            "mesh_prompt": "Ronald McDonald",
+            "texture_prompt": "original",
+            "metallic": 0.5,
+            "roughness": 0.5,
+            "generate_maps": false,
+            "mesh_algorithm": "dreamfusion",
+            "guidance": "stable-diffusion",
+            "seed": 465577,
+            "train_iterations": 100,
+            "votes": 0,
+            "public": true,
+            "negative_prompt": "",
+            "negative_votes": 0,
+            "stable_diffusion_checkpoint": "stabilityai/stable-diffusion-2-base",
+            "inference_run_id": "100ba6e7-6536-4314-af88-1f6445ab9197",
+            "style": "skyrim",
+            "polygon": "tris",
+            "urls": {
+                "fbx": null,
+                "gif": null,
+                "glb": "https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/260a23f4-f145-4055-87d4-4ea8be10e087/4794a3d2-b460-4da6-9d20-3ea95d3249da/mesh.glb?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221129T185054Z&X-Amz-Expires=604800&X-Amz-Signature=9c89c4cbdd4ec50491b200e08d605db93819e0d5bb383806a758192047de4adf&X-Amz-SignedHeaders=host&x-id=GetObject",
+                "mtl": "https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/260a23f4-f145-4055-87d4-4ea8be10e087/4794a3d2-b460-4da6-9d20-3ea95d3249da/mesh.mtl?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221129T185054Z&X-Amz-Expires=604800&X-Amz-Signature=bf33515e9a03d5fe9b16623a832ab66e3d0592a27e03a1494ecba9e3780f9db1&X-Amz-SignedHeaders=host&x-id=GetObject",
+                "obj": "https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/260a23f4-f145-4055-87d4-4ea8be10e087/4794a3d2-b460-4da6-9d20-3ea95d3249da/mesh.obj?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221129T185054Z&X-Amz-Expires=604800&X-Amz-Signature=62b737ddce49bc37043e7123dba8d4adc1b0eb53b7721cc9a595cebb80939171&X-Amz-SignedHeaders=host&x-id=GetObject",
+                "png": "https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/260a23f4-f145-4055-87d4-4ea8be10e087/4794a3d2-b460-4da6-9d20-3ea95d3249da/mesh.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221129T185054Z&X-Amz-Expires=604800&X-Amz-Signature=4165098adabf2990e469b473995ac90547ceafc3f27b35f9a724dd1b7cb5f523&X-Amz-SignedHeaders=host&x-id=GetObject",
+                "gltf": "https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/260a23f4-f145-4055-87d4-4ea8be10e087/4794a3d2-b460-4da6-9d20-3ea95d3249da/mesh.gltf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221129T185054Z&X-Amz-Expires=604800&X-Amz-Signature=2d3d8c6a35619ed4ed6f1bccbb591dcb36aaa6adba14333e8e33877ed0d67887&X-Amz-SignedHeaders=host&x-id=GetObject"
+            },
+            "enable_remix": true,
+            "mesh_url": "https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/260a23f4-f145-4055-87d4-4ea8be10e087/4794a3d2-b460-4da6-9d20-3ea95d3249da/mesh.obj?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221129T193639Z&X-Amz-Expires=900&X-Amz-Signature=6164b4131844317aa80bdf5813c7fbba8a1b0471f360e5022d29c4380ba964cb&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "glb_url": "https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/260a23f4-f145-4055-87d4-4ea8be10e087/4794a3d2-b460-4da6-9d20-3ea95d3249da/mesh.glb?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221129T193640Z&X-Amz-Expires=900&X-Amz-Signature=5c5cde6c0bcf5fc48f492e3b78c2f2e47191532432858162c13c37cbd2530e4b&X-Amz-SignedHeaders=host&x-id=GetObject",
+            "png_url": "https://mirage-platform-texture-mesh-assets.s3.us-east-1.amazonaws.com/public/260a23f4-f145-4055-87d4-4ea8be10e087/4794a3d2-b460-4da6-9d20-3ea95d3249da/mesh.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YM22FLMUB%2F20221129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221129T193642Z&X-Amz-Expires=900&X-Amz-Signature=798742ebdce2c2d719c50446a006107fedc2deda7430cbddd8a3c7a1f7e28de4&X-Amz-SignedHeaders=host&x-id=GetObject"
+        }
+    ]
+}
+```
+</ResponseExample>
