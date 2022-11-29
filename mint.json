@@ -29,6 +29,11 @@
       "url": "https://medium.com/mirageml"
     },
     {
+      "name": "Hugging Face",
+      "icon": "face-smiling-hands",
+      "url": "https://huggingface.co/MirageML"
+    },
+    {
       "name": "Discord",
       "icon": "discord",
       "url": "https://discord.com/invite/jxBMsK4MMn"
@@ -46,6 +51,10 @@
     {
       "group": "Home",
       "pages": ["introduction"]
+    },
+    {
+      "group": "Open Source",
+      "pages": ["open-source/public-dataset"]
     },
     {
       "group": "Stable Diffusion",
