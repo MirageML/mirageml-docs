@@ -17,8 +17,20 @@ Creates a dreambooth project
   Describes the word
 </ParamField>
 
-<ParamField body="train-iterations" type="string" default="800">
+<ParamField body="train-iterations" type="number" default="800">
   Number of iterations to train
+</ParamField>
+
+<ParamField body="square-func" type="string" default="expand">
+  Enum: `expand`, `crop`, `square`
+</ParamField>
+
+<ParamField body="prior-preservation" type="boolean" default="false">
+  Should be true if working with faces
+</ParamField>
+
+<ParamField body="safety-filter" type="boolean" default="false">
+  Automatically filters NSFW images
 </ParamField>
 
 <ParamField body="links" type="string">
@@ -41,6 +53,9 @@ curl -X POST \
   -H 'x-api-key: <API_KEY>' \
   -F init-word=<INIT_WORD> \
   -F train-iterations=<TRAIN_ITERATIONS> \
+  -F square-fun=<SQUARE_FUNC> \
+  -F prior-preservation=<PRIOR_PRESERVATION> \
+  -F safety-filter=<SAFETY_FILTER> \
   -F 'files[]=<FILES>' \
   -F 'links={"0": "https://sabe.io/images/saturn.png", "1": "https://sabe.io/images/saturn.png"}'
 ```
