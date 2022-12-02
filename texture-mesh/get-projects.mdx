@@ -28,103 +28,184 @@ curl -X 'GET' \
 
 <ResponseExample>
 ```json
-{
-    "pageInfo": {
-        "endCursor": "WyIyMDIyLTEwLTA5VDIzOjU1OjI3LjM1MDMyMiswMDowMCIsICI1MDU2ZGE1MC02Y2Q0LTRhMWIt\nOWE1OC03NWM0OGQ3ZjEwNmMiXQ==",
-        "__typename": "PageInfo",
-        "hasNextPage": true,
-        "startCursor": "WyIyMDIyLTExLTA4VDIyOjQ1OjQ5LjcwOTYyKzAwOjAwIiwgImIzNjcxODNhLTk4YTAtNGZjMS1i\nMjQ2LTgyZjc4Mzc4ZGRmOCJd"
+[
+  {
+    "node": {
+      "id": "1d260875-be48-4944-be89-680562725ae3",
+      "init_word": "simreal",
+      "__typename": "textual_inversion_projects",
+      "created_at": "2022-09-19T16:39:36.316376+00:00",
+      "error_message": null,
+      "train_iterations": "3000",
+      "finetune_job_status": "succeeded",
+      "textual_inversion_runsCollection": {
+        "edges": [
+          {
+            "node": {
+              "id": "6913c85e-a15b-45ae-92b6-9964572deca5",
+              "width": "512",
+              "height": "512",
+              "prompt": "warehouse in the style of <simreal>",
+              "status": "succeeded",
+              "__typename": "textual_inversion_runs",
+              "created_at": "2022-09-19T23:56:05.401312+00:00",
+              "init_image": true,
+              "num_images": "3",
+              "error_message": null,
+              "guidance_scale": 7.5,
+              "prompt_strength": 0.8,
+              "num_inference_steps": "50"
+            },
+            "__typename": "textual_inversion_runsEdge"
+          }
+        ],
+        "__typename": "textual_inversion_runsConnection"
+      }
     },
-    "data": [
-        {
+    "__typename": "textual_inversion_projectsEdge"
+  },
+  {
+    "node": {
+      "id": "2735e4fa-238a-49e7-8b13-da1c2f2aae15",
+      "init_word": "bridge",
+      "__typename": "textual_inversion_projects",
+      "created_at": "2022-10-13T05:49:40.894215+00:00",
+      "error_message": null,
+      "train_iterations": "3000",
+      "finetune_job_status": "succeeded",
+      "textual_inversion_runsCollection": {
+        "edges": [
+          {
             "node": {
-                "id": "b367183a-98a0-4fc1-b246-82f78378ddf8",
-                "type": "create",
-                "prompt": "tree",
-                "status": "succeeded",
-                "__typename": "text_mesh_projects",
-                "created_at": "2022-11-08T22:45:49.70962+00:00",
-                "text_mesh_runsCollection": {
-                    "edges": [],
-                    "__typename": "text_mesh_runsConnection"
-                },
-                "meshUrl": "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/texture_mesh/projects/b367183a-98a0-4fc1-b246-82f78378ddf8/mesh/mesh.obj?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221110%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221110T203041Z&X-Amz-Expires=900&X-Amz-Signature=a6da6f58dac391c4d863b3e3553e462f62cc5bea00f7cb909fe0ae0831e3c80f&X-Amz-SignedHeaders=host&x-id=GetObject"
+              "id": "19d35ec8-4550-48b1-a46a-4afb4e9c4bc7",
+              "width": "512",
+              "height": "512",
+              "prompt": "sks bridge",
+              "status": "running",
+              "__typename": "textual_inversion_runs",
+              "created_at": "2022-10-14T18:43:08.925706+00:00",
+              "init_image": false,
+              "num_images": "9",
+              "error_message": null,
+              "guidance_scale": 7.5,
+              "prompt_strength": 0.8,
+              "num_inference_steps": "50"
             },
-            "cursor": "WyIyMDIyLTExLTA4VDIyOjQ1OjQ5LjcwOTYyKzAwOjAwIiwgImIzNjcxODNhLTk4YTAtNGZjMS1i\nMjQ2LTgyZjc4Mzc4ZGRmOCJd",
-            "__typename": "text_mesh_projectsEdge"
-        },
-        {
+            "__typename": "textual_inversion_runsEdge"
+          },
+          {
             "node": {
-                "id": "3f80919e-924c-47b5-bd63-60e509435625",
-                "type": "create",
-                "prompt": "burger",
-                "status": "succeeded",
-                "__typename": "text_mesh_projects",
-                "created_at": "2022-11-08T00:26:42.359664+00:00",
-                "text_mesh_runsCollection": {
-                    "edges": [],
-                    "__typename": "text_mesh_runsConnection"
-                },
-                "meshUrl": "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/texture_mesh/projects/3f80919e-924c-47b5-bd63-60e509435625/mesh/mesh.obj?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221110%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221110T203041Z&X-Amz-Expires=900&X-Amz-Signature=a738e5a9fbb869f4687dd3f043960f80284e4c261b6c562b7153d78ff1a17f5f&X-Amz-SignedHeaders=host&x-id=GetObject"
+              "id": "42d7cff9-f69b-4409-98b5-c847c333140a",
+              "width": "512",
+              "height": "512",
+              "prompt": "sks bridge",
+              "status": "failed",
+              "__typename": "textual_inversion_runs",
+              "created_at": "2022-10-14T02:36:48.895848+00:00",
+              "init_image": false,
+              "num_images": "9",
+              "error_message": null,
+              "guidance_scale": 7.5,
+              "prompt_strength": 0.8,
+              "num_inference_steps": "50"
             },
-            "cursor": "WyIyMDIyLTExLTA4VDAwOjI2OjQyLjM1OTY2NCswMDowMCIsICIzZjgwOTE5ZS05MjRjLTQ3YjUt\nYmQ2My02MGU1MDk0MzU2MjUiXQ==",
-            "__typename": "text_mesh_projectsEdge"
-        },
-        {
+            "__typename": "textual_inversion_runsEdge"
+          },
+          {
             "node": {
-                "id": "66bb509b-7888-427a-b9fc-1a915a46fba0",
-                "type": "upload",
-                "prompt": "Pallet_A1",
-                "status": "succeeded",
-                "__typename": "text_mesh_projects",
-                "created_at": "2022-10-10T00:05:43.106404+00:00",
-                "text_mesh_runsCollection": {
-                    "edges": [
-                        {
-                            "node": {
-                                "id": "433db382-d08a-4543-bbd7-b6aa28683745",
-                                "prompt": "shiny rough metal",
-                                "status": "succeeded",
-                                "color_map": false,
-                                "__typename": "text_mesh_runs",
-                                "created_at": "2022-10-13T20:53:49.681228+00:00",
-                                "init_image": false,
-                                "num_outputs": "4",
-                                "square_func": "scale",
-                                "generate_maps": true,
-                                "make_tileable": false,
-                                "prompt_strength": 0.8,
-                                "super_resolution": "4096"
-                            },
-                            "__typename": "text_mesh_runsEdge"
-                        },
-                        {
-                            "node": {
-                                "id": "e92f0027-c1a8-469f-a44c-e066e7fdb663",
-                                "prompt": "shiny rough metal",
-                                "status": "succeeded",
-                                "color_map": false,
-                                "__typename": "text_mesh_runs",
-                                "created_at": "2022-10-11T01:11:01.361866+00:00",
-                                "init_image": false,
-                                "num_outputs": "4",
-                                "square_func": "scale",
-                                "generate_maps": true,
-                                "make_tileable": false,
-                                "prompt_strength": 0.8,
-                                "super_resolution": "0"
-                            },
-                            "__typename": "text_mesh_runsEdge"
-                        }
-                    ],
-                    "__typename": "text_mesh_runsConnection"
-                },
-                "meshUrl": "https://mirage-platform-user-data.s3.us-east-1.amazonaws.com/ca3ca3b8-9146-48e3-9106-1d8e42f8f5b5/texture_mesh/projects/66bb509b-7888-427a-b9fc-1a915a46fba0/mesh/mesh.obj?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA4WDJHC7YNXRCDFPR%2F20221110%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221110T203041Z&X-Amz-Expires=900&X-Amz-Signature=1cb57138413e685608d01319a954a6e846b4469b27dabe98690d91065bebeac8&X-Amz-SignedHeaders=host&x-id=GetObject"
+              "id": "c6bfbecb-43fe-4967-a5a8-89ea9519bae1",
+              "width": "512",
+              "height": "512",
+              "prompt": "the sks of a bridge",
+              "status": "failed",
+              "__typename": "textual_inversion_runs",
+              "created_at": "2022-10-14T01:10:43.393552+00:00",
+              "init_image": false,
+              "num_images": "9",
+              "error_message": null,
+              "guidance_scale": 7.5,
+              "prompt_strength": 0.8,
+              "num_inference_steps": "50"
             },
-            "cursor": "WyIyMDIyLTEwLTEwVDAwOjA1OjQzLjEwNjQwNCswMDowMCIsICI2NmJiNTA5Yi03ODg4LTQyN2Et\nYjlmYy0xYTkxNWE0NmZiYTAiXQ==",
-            "__typename": "text_mesh_projectsEdge"
-        },
-    ]
-}
+            "__typename": "textual_inversion_runsEdge"
+          },
+          {
+            "node": {
+              "id": "da186a03-bc43-4772-baca-bc4edcb06a6a",
+              "width": "512",
+              "height": "512",
+              "prompt": "a photo of an sks bridge in the style of picasso",
+              "status": "succeeded",
+              "__typename": "textual_inversion_runs",
+              "created_at": "2022-10-13T06:40:49.407672+00:00",
+              "init_image": false,
+              "num_images": "1",
+              "error_message": null,
+              "guidance_scale": 7.5,
+              "prompt_strength": 0.8,
+              "num_inference_steps": "50"
+            },
+            "__typename": "textual_inversion_runsEdge"
+          }
+        ],
+        "__typename": "textual_inversion_runsConnection"
+      }
+    },
+    "__typename": "textual_inversion_projectsEdge"
+  },
+  {
+    "node": {
+      "id": "2f27e8d5-936b-4d4a-839c-13ac70687aa4",
+      "init_word": "style",
+      "__typename": "textual_inversion_projects",
+      "created_at": "2022-10-05T18:10:59.89405+00:00",
+      "error_message": null,
+      "train_iterations": "400",
+      "finetune_job_status": "succeeded",
+      "textual_inversion_runsCollection": {
+        "edges": [
+          {
+            "node": {
+              "id": "16fb9e83-33c1-47d4-abd6-b27811c57719",
+              "width": "512",
+              "height": "512",
+              "prompt": "a <style>",
+              "status": "failed",
+              "__typename": "textual_inversion_runs",
+              "created_at": "2022-10-05T18:59:51.106456+00:00",
+              "init_image": false,
+              "num_images": "9",
+              "error_message": null,
+              "guidance_scale": 7.5,
+              "prompt_strength": 0.8,
+              "num_inference_steps": "50"
+            },
+            "__typename": "textual_inversion_runsEdge"
+          },
+          {
+            "node": {
+              "id": "a0951da2-ab77-436a-94cd-c5941558a205",
+              "width": "512",
+              "height": "512",
+              "prompt": "a <style>",
+              "status": "succeeded",
+              "__typename": "textual_inversion_runs",
+              "created_at": "2022-10-05T19:03:35.021924+00:00",
+              "init_image": false,
+              "num_images": "9",
+              "error_message": null,
+              "guidance_scale": 7.5,
+              "prompt_strength": 0.8,
+              "num_inference_steps": "50"
+            },
+            "__typename": "textual_inversion_runsEdge"
+          }
+        ],
+        "__typename": "textual_inversion_runsConnection"
+      }
+    },
+    "__typename": "textual_inversion_projectsEdge"
+  }
+]
 ```
 </ResponseExample>
