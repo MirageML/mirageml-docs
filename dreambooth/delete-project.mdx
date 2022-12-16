@@ -1,6 +1,6 @@
 ---
 title: "Delete Project"
-api: "POST /dreambooth/project"
+api: "DELETE /dreambooth/project"
 ---
 
 <ParamField header="Authorization" type="string" required hidden />
@@ -18,7 +18,7 @@ Deletes the intalization images for a dreambooth project
 
 <RequestExample>
 ```bash cURL
-curl -X 'GET' \
+curl -X 'DELETE' \
   'https://api.mirageml.com/dreambooth/project' \
   -H 'accept: application/json' \
   -H 'Authorization: <AUTHORIZATION>' \

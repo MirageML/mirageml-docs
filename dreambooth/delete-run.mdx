@@ -1,6 +1,6 @@
 ---
 title: "Delete Run"
-api: "POST /dreambooth/run"
+api: "DELETE /dreambooth/run"
 ---
 
 <ParamField header="Authorization" type="string" required hidden />
@@ -23,7 +23,7 @@ Deletes the output images for a dreambooth inference
 
 <RequestExample>
 ```bash cURL
-curl -X 'GET' \
+curl -X 'DELETE' \
   'https://api.mirageml.com/dreambooth/run' \
   -H 'accept: application/json' \
   -H 'Authorization: <AUTHORIZATION>' \
