@@ -1,0 +1,39 @@
+---
+title: "Delete Project"
+api: "POST /dreambooth/project"
+---
+
+<ParamField header="Authorization" type="string" required hidden />
+<ParamField header="x-api-key" type="string" required hidden />
+
+### Description
+
+Deletes the intalization images for a dreambooth project
+
+### Body Data
+
+<ParamField body="project-id" type="string" required>
+  Project id of the project
+</ParamField>
+
+<RequestExample>
+```bash cURL
+curl -X 'GET' \
+  'https://api.mirageml.com/dreambooth/project' \
+  -H 'accept: application/json' \
+  -H 'Authorization: <AUTHORIZATION>' \
+  -H 'x-api-key: <API_KEY>'
+```
+</RequestExample>
+
+<ResponseExample>
+```json
+{
+  "statusCode": 200,
+  "body": {
+    "message": "Deleted project init image",
+    "files": []
+  }
+}
+```
+</ResponseExample>
