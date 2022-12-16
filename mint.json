@@ -71,9 +71,11 @@
       "pages": [
         "dreambooth/get-projects",
         "dreambooth/get-project",
+        "dreambooth/delete-project",
         "dreambooth/create-project",
         "dreambooth/get-run",
-        "dreambooth/create-run"
+        "dreambooth/create-run",
+        "dreambooth/delete-run"
       ]
     },
     {

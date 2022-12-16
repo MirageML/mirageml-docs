@@ -1,0 +1,44 @@
+---
+title: "Delete Run"
+api: "DELETE /dreambooth/run"
+---
+
+<ParamField header="Authorization" type="string" required hidden />
+<ParamField header="x-api-key" type="string" required hidden />
+
+### Description
+
+Deletes the output images for a dreambooth inference
+
+### Body Data
+
+<ParamField body="project-id" type="string" required>
+  Project id of the project
+</ParamField>
+
+<ParamField body="run-id" type="string" required>
+  Run id of the project
+</ParamField>
+
+
+<RequestExample>
+```bash cURL
+curl -X 'DELETE' \
+  'https://api.mirageml.com/dreambooth/run' \
+  -H 'accept: application/json' \
+  -H 'Authorization: <AUTHORIZATION>' \
+  -H 'x-api-key: <API_KEY>'
+```
+</RequestExample>
+
+<ResponseExample>
+```json
+{
+  "statusCode": 200,
+  "body": {
+    "message": "Deleted inference output images",
+    "files": []
+  }
+}
+```
+</ResponseExample>
