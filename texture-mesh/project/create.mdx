@@ -9,7 +9,7 @@ api: "POST /texture-mesh/project/create"
 ### Description
 Create a mesh with prompt and mesh algorithm
 
-### Body Data
+### Form Data
 <ParamField body="prompt" type="string" required>
   The input prompt.
 
@@ -53,11 +53,26 @@ Create a mesh with prompt and mesh algorithm
   Use Negative Prompt to suppress output
 </ParamField>
 
+<ParamField body="links" type="string">
+JSON object of links to images to download.
+Example:
+```
+{"0": "https://sabe.io/images/saturn.png" }
+```
+</ParamField>
+
+<ParamField body="files[]" type="files"></ParamField>
+
 <RequestExample>
 ```bash cURL
 curl -X 'POST' \
   'https://api.mirageml.com/texture-mesh/project/create' \
-  -H 'accept: application/json'
+  -H 'Authorization: <AUTHORIZATION>' \
+  -H 'Cache-Control: no-cache' \
+  -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+  -H 'x-api-key: <API_KEY>' \
+  -F prompt=<PROMPT> \
+  -F 'files[]=<FILES>' \
 ```
 </RequestExample>
 
