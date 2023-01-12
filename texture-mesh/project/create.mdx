@@ -11,7 +11,46 @@ Create a mesh with prompt and mesh algorithm
 
 ### Body Data
 <ParamField body="prompt" type="string" required>
-  The input prompt
+  The input prompt.
+
+  Enum (`get3d`): `car`, `motorbike`, `chair`, `table`, `rocket`, `airplane`, `train`
+</ParamField>
+
+<ParamField body="mesh-algorithm" type="string" default="point-e">
+  Enum: `point-e`, `get3d`, `dreamfusion`
+
+  The underlying algorithm to use for generating the mesh.
+</ParamField>
+
+<ParamField body="guidance" type="string" default="base1B">
+  Enum (`point-e`): `base40M`, `base300M`, `base1B`
+
+  Number of parameters used to create model.
+
+
+  Enum (`Dreamfusion`): `clip`, `stable-diffusion`
+
+  CLIP and Stable Diffusion are text-to-image embedding models used.
+</ParamField>
+
+<ParamField body="train-iterations" type="number" default="3">
+  Point-E: How much the image impacts the final output
+
+  Dreamfusion: 100 iterations are recommended for highest quality results, fewer iterations will finish faster
+</ParamField>
+
+<ParamField body="stable-diffusion-checkpoint" type="string" default="stabilityai/stable-diffusion-2-1-base">
+  Change the stable diffusion checkpoint. You can use any public Hugging Face Checkpoint.
+</ParamField>
+
+<ParamField body="polygon" type="string" default="tris">
+  Enum: `tris`, `quads`
+
+  The type of polygons to use when generating the mesh
+</ParamField>
+
+<ParamField body="negative-prompt" type="string">
+  Use Negative Prompt to suppress output
 </ParamField>
 
 <RequestExample>
